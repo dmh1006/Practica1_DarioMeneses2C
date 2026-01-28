@@ -147,3 +147,27 @@ def leer_teclado():
         direccion = None
         yield mov, False
 
+def mostrar_menu():
+    """
+    Muestra un menú sencillo por consola para seleccionar la dificultad.
+    Devuelve la opción elegida como string: 'easy', 'medium' o 'hard'.
+    """
+    while True:
+        print("=== PAC-MAN ===")
+        print("Selecciona dificultad:")
+        print("1 - Easy")
+        print("2 - Medium")
+        print("3 - Hard")
+
+        opcion = input("Opción: ")
+
+        if opcion == "1":
+            return "easy"
+        elif opcion == "2":
+            return "medium"
+        elif opcion == "3":
+            return "hard"
+        else:
+            print("Opción no válida. Intenta de nuevo.\n")
+
+
