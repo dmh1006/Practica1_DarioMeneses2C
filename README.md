@@ -3,17 +3,14 @@
 **Grado:** Ingeniería de la Salud  
 **Universidad:** Universidad de Burgos
 
+
 ## Descripción
 
-En esta práctica se implementa una versión simplificada del juego **Pac-Man**, desarrollada conforme al enunciado y la rúbrica proporcionados en la asignatura *Sistemas Inteligentes*.
+Esta práctica consiste en el desarrollo de una versión simplificada del juego Pac-Man, cuyo objetivo es aplicar de forma práctica los contenidos vistos en la asignatura de Sistemas Inteligentes.
 
-El objetivo principal de la práctica es aplicar los conceptos vistos en clase relacionados con:
-- representación de estados,
-- modularización del código,
-- separación entre lógica y presentación,
-- y gestión de eventos.
+A lo largo del trabajo se implementa la lógica básica del juego, incluyendo el movimiento del personaje, la interacción con el tablero y la gestión de la comida y la puntuación. Para ello, se ha puesto especial énfasis en organizar correctamente el código y separar la lógica del sistema de la forma en la que se muestra al usuario.
 
-La implementación se ha realizado respetando estrictamente las indicaciones del profesorado, sin utilizar técnicas ni librerías no vistas en la asignatura.
+El proyecto permite ejecutar el juego de dos maneras distintas: mediante un entorno visual interactivo basado en un notebook y a través de la consola, reutilizando en ambos casos la misma base lógica del juego.
 
 
 ## Descripción de archivos
