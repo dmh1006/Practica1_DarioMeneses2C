@@ -146,3 +146,4 @@ def leer_teclado():
         mov = direccion
         direccion = None
         yield mov, False
+

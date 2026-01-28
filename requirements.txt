@@ -1,2 +1,3 @@
-pip install pynput
-pip freeze > requirements.txt
+pynput
+ipywidgets
+IPython
