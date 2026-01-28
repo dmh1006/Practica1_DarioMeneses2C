@@ -106,3 +106,43 @@ def posicion_hay_comida(coordenada: Coordenada, comida: Comida) -> bool:
     Devuelve True si la coordenada está en la lista de comida.
     """
     return coordenada in comida
+
+def leer_teclado():
+    """
+    Lee el teclado con pynput y devuelve un generador.
+    - Devuelve (mov, terminado)
+    - mov es arriba/abajo/izquierda/derecha o None si no hay pulsación nueva
+    - terminado es True si se pulsa ESC
+    """
+    from pynput import keyboard
+
+    direccion = None
+    terminado = False
+
+    def on_press(tecla):
+        nonlocal direccion, terminado
+
+        if tecla == keyboard.Key.esc:
+            terminado = True
+            return False
+
+        if tecla == keyboard.Key.up:
+            direccion = arriba
+        elif tecla == keyboard.Key.down:
+            direccion = abajo
+        elif tecla == keyboard.Key.left:
+            direccion = izquierda
+        elif tecla == keyboard.Key.right:
+            direccion = derecha
+
+    listener = keyboard.Listener(on_press=on_press)
+    listener.start()
+
+    while True:
+        if terminado:
+            yield None, True
+            break
+
+        mov = direccion
+        direccion = None
+        yield mov, False
